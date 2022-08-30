@@ -383,13 +383,15 @@
       <h2 class="section-title">Get In Touch</h2>
 
       <div class="contact__container bd-grid">
-        <form action="" class="contact__form">
+
+        <form action="https://formsubmit.co/f1a935ef550c2643e72cf89ce980ab33" method="POST" class="contact__form">
           <div class="contact__inputs">
-            <input type="text" placeholder="Name" class="contact__input">
-            <input type="mail" placeholder="Email" class="contact__input">
+            <input type="text" required name="Name" placeholder="Name" class="contact__input">
+            <input type="mail" required name="Email" placeholder="Email" class="contact__input">
           </div>
-          <input type="text" placeholder="Project" class="contact__input">
-          <textarea name="" id="" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+          <input type="text"  required name="Project" placeholder="Project" class="contact__input">
+          <textarea required name="Message" rows="5" placeholder="Message" class="contact__input"></textarea>
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contact">
           <input type="submit" value="Send Message" class="button contact__button">
         </form>
 
