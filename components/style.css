@@ -278,6 +278,11 @@ img {
   color: var(--first-color);
 }
 
+.button__light {
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+}
+
 .button__light:hover {
   color: var(--first-color-lighten);
 }
@@ -660,7 +665,7 @@ img {
   color: var(--text-color);
 }
 
-/* Media Quaries */
+/* Media on medium screen window */
 @media screen and (min-width: 768px) {
   .home__button {
     width: initial;
@@ -744,6 +749,7 @@ img {
   }
 }
 
+/* Media on big screen window */
 @media screen and (min-width: 1024px) {
   body {
     margin: 0;
