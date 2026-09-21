@@ -17,7 +17,6 @@
   --first-color-darken: #290f09;
   --text-color: #54423d;
   --first-color-light: #eae7e6;
-  --first-color: #cc4b2c;
   --first-color-lighten: #fffafa;
 
   /* font and typography */
@@ -374,39 +373,40 @@ img {
 }
 
 .skills__html {
-  width: 80%;
+  width: 90%;
 }
 
 .skills__css {
-  width: 80%;
+  width: 90%;
 }
 
 .skills__js {
-  width: 70%;
+  width: 85%;
 }
 
 .skills__react {
   width: 60%;
 }
 
-.skills__java {
+.skills__php {
   width: 80%;
 }
 
-.skills__python {
-  width: 60%;
+.skills__nodejs {
+  width: 75%;
 }
 
 .skills__sql {
-  width: 80%;
+  width: 90%;
 }
 
-.skills__node {
-  width: 60%;
+.skills__java {
+  width: 70%;
 }
 
-/* Education */
-.education__container {
+/* Education & Experience */
+.education__container,
+.experience__container {
   row-gap: 2rem;
 }
 
@@ -425,6 +425,14 @@ img {
 .education__specialty {
   display: block;
   font-size: var(--smaller-font-size);
+}
+
+a.education__university {
+  transition: color 0.3s;
+}
+
+a.education__university:hover {
+  color: var(--first-color);
 }
 
 .education__year,
@@ -553,6 +561,13 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
+  height: 350px !important;
+}
+.works__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .works__data {
@@ -670,7 +685,7 @@ img {
 
 .footer__copy {
   font-size: var(--smaller-font-size);
-  color: var(--text-color);
+  color: var(--first-color-lighten);
 }
 
 /* Media on medium screen window */
@@ -796,3 +811,83 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Theme Control Buttons */
+.nav__buttons {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: calc(var(--z-fixed) + 10);
+}
+
+.change-theme {
+  font-size: 1.4rem;
+  color: var(--first-color);
+  background-color: var(--first-color-lighten);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.change-theme:hover {
+  transform: rotate(30deg) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Theme Variables & Customizations */
+body.dark-theme {
+  --first-color-lighten: #0b1120;
+  --first-color-light: #1e293b;
+  --text-color: #e2e8f0;
+  --first-color-darken: #94a3b8;
+  background-color: var(--first-color-lighten);
+  color: var(--text-color);
+}
+
+body.dark-theme .l-header {
+  background-color: var(--first-color-lighten);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .nav__menu {
+  background-color: var(--first-color-light);
+}
+
+body.dark-theme .change-theme {
+  background-color: var(--first-color-light);
+  color: var(--first-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .services__content {
+  border-color: var(--first-color);
+  background-color: var(--first-color-light);
+}
+
+body.dark-theme .contact__input {
+  background-color: var(--first-color-light);
+  color: var(--text-color);
+}
+
+body.dark-theme .contact__input::placeholder {
+  color: var(--first-color-darken);
+}
+
+body.dark-theme .footer {
+  background-color: #030712;
+}
+
+body.dark-theme .footer__container {
+  background-color: #030712;
+}
+
+
